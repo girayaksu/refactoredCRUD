@@ -44,9 +44,9 @@ export function updateCategoryForm() {
 }
 
 export function toUpdateCategoryRequest(form: UpdateCategoryForm): UpdateCategoryRequestModel {
-  return {
-    id: form.controls.id.value,
-    categoryName: form.controls.name.value,
-    description: form.controls.description.value,
-  };
+  return new UpdateCategoryRequestModel(
+    form.controls.id.value,
+    form.controls.name.value,
+    form.controls.description.value
+  );
 }

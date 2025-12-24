@@ -9,8 +9,8 @@ export function createCategoryForm(): CreateCategoryForm {
 }
 
 export function toCreateCategoryRequest(form: CreateCategoryForm): CreateCategoryRequestModel {
-  return {
-    categoryName: form.controls.name.value,
-    description: form.controls.description.value,
-  };
+  return new CreateCategoryRequestModel(
+    form.controls.name.value,
+    form.controls.description.value
+  );
 }

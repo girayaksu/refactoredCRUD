@@ -75,8 +75,8 @@
         </div>
     }
 
-    <button type="submit" [disabled]="createForm.invalid">Güncelle</button>
+    <button type="submit" [disabled]="updateForm.invalid">Güncelle</button>
 
-    <button type="submit" (click)="cancelUpdate()">İptal</button>
+    <button type="button" (click)="cancelUpdate()">İptal</button>
     </form>
 }
